@@ -1,0 +1,80 @@
+/* navigation base set up */
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgb(243, 243, 243);
+    padding: 0 16px; 
+}
+/*main nav menu*/
+.nav-menu {
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.nav-item {
+    position: relative;
+    cursor: pointer;
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius:  1.5rem;
+}
+.nav-link span{
+    margin-left: 0.5rem;
+}
+.nav-link:hover{
+    background-color: #02161db9 ;
+    color: #f5f5f5;
+}
+.dropdown-icon{
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+/*rotate the dropdown icon when enter the nav-item*/
+.nav-item:hover .dropdown-icon{
+    transform: rotate(180deg);
+}
+/*sub-menu*/
+.sub-menu{
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+/*control the sub-menu*/
+.nav-item:hover .sub-menu{
+/* .nav-item.active .sub-menu  */
+    opacity: 1;
+    visibility: visible;
+}
+.sub-menu .nav-link{
+    color: #333;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.sub-menu .nav-item:hover{
+    background-color: #c4c4c4;
+    color: #ff0000c9;
+}
+
