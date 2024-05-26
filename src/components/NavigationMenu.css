@@ -9,6 +9,11 @@
     padding: 0 16px; 
 }
 /*main nav menu*/
+.Logo{
+    display: block;
+    text-align: left;
+    color: white;
+}
 .nav-menu {
     list-style:none;
     padding: 0;
@@ -37,6 +42,11 @@
     background-color: #02161db9 ;
     color: #f5f5f5;
 }
+.active {
+    background: #02161d !important;
+    color: #f5f5f5;
+    border-radius: 1.5rem;
+}
 .dropdown-icon{
     margin-left: 0.5rem;
     transition: transform 0.3s ease;
@@ -60,21 +70,20 @@
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-/*control the sub-menu*/
-.nav-item:hover .sub-menu{
-/* .nav-item.active .sub-menu  */
+.nav-item:hover > .sub-menu {
     opacity: 1;
     visibility: visible;
 }
-.sub-menu .nav-link{
+
+.sub-menu .nav-link {
     color: #333;
     font-weight: 400;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-.sub-menu .nav-item:hover{
+
+.sub-menu .nav-link:hover {
     background-color: #c4c4c4;
     color: #ff0000c9;
 }
-
